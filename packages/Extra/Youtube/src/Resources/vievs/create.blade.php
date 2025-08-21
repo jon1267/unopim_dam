@@ -1,18 +1,18 @@
 <x-admin::layouts>
-@section('content')
-    <h1>Добавить видео</h1>
 
-    <form method="POST" action="{{ route('youtube.store') }}">
+    <h1 class="text-white mb-3">Add Video</h1>
+
+    <x-admin::form method="POST" action="{{ route('youtube.store') }}">
         @csrf
         <div class="mb-3">
-            <label>Название:</label>
+            <label class="text-white mr-2">Title:</label>
             <input type="text" name="title" class="form-control" required>
         </div>
         <div class="mb-3">
-            <label>Ссылка (YouTube URL):</label>
-            <input type="url" name="url" class="form-control" required>
+            <label class="text-white mr-2">Link (YouTube URL):</label>
+            <input type="url" name="youtube_url" class="form-control" required>
         </div>
         <button class="btn btn-success">Сохранить</button>
-    </form>
-@endsection
+    </x-admin::form>
+
 </x-admin::layouts>

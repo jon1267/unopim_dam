@@ -29,7 +29,7 @@ class YoutubeServiceProvider extends ServiceProvider
     protected function registerRoutes(): void
     {
         Route::middleware(['web', 'auth'])
-            ->prefix('youtube')
+            ->prefix('admin/youtube')
             ->name('youtube.')
             ->group(__DIR__ . '/routes/web.php');
     }

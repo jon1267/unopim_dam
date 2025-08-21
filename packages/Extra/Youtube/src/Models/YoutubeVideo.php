@@ -10,5 +10,5 @@ class YoutubeVideo extends Model
     use HasFactory;
 
     protected $table = 'youtube_videos';
-    protected $fillable = ['title', 'url'];
+    protected $fillable = ['title', 'youtube_url'];
 }

@@ -22,18 +22,18 @@ class YoutubeController extends \App\Http\Controllers\Controller
     {
         $request->validate([
             'title' => 'required|string|max:255',
-            'url'   => 'required|url',
+            'youtube_url'   => 'required|url',
         ]);
 
-        YoutubeVideo::create($request->only('title', 'url'));
+        YoutubeVideo::create($request->only('title', 'youtube_url'));
 
-        return redirect()->route('youtube.index')->with('success', 'video added successfully!');
+        return redirect()->route('youtube.index')->with('success', 'Video added successfully!');
     }
 
     public function destroy(YoutubeVideo $video)
     {
         $video->delete();
-        return back()->with('success', 'Видео удалено.');
+        return back()->with('success', 'Video deleted successfully.');
     }
 }
 

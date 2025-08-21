@@ -1,16 +1,16 @@
 <x-admin::layouts>
-@section('content')
-    <h1>Youtube Videos</h1>
 
-    <a href="{{ route('youtube.create') }}" class="btn btn-primary mb-3">Добавить видео</a>
+    <h1 class="text-white">Youtube Videos</h1>
 
-    <table class="table table-bordered">
+    <a href="{{ route('youtube.create') }}" class="text-white btn btn-primary mb-3">Add Video</a>
+
+    <table class="table table-bordered text-white">
         <thead>
         <tr>
             <th>ID</th>
-            <th>Название</th>
+            <th>Title</th>
             <th>URL</th>
-            <th>Дата</th>
+            <th>Date</th>
             <th></th>
         </tr>
         </thead>
@@ -19,14 +19,14 @@
             <tr>
                 <td>{{ $video->id }}</td>
                 <td>{{ $video->title }}</td>
-                <td><a href="{{ $video->url }}" target="_blank">{{ $video->url }}</a></td>
+                <td><a href="{{ $video->youtube_url }}" target="_blank">{{ $video->youtube_url }}</a></td>
                 <td>{{ $video->created_at }}</td>
                 <td>
-                    <form method="POST" action="{{ route('youtube.destroy', $video) }}">
+                    {{--<form method="POST" action="{{ route('youtube.destroy', $video) }}">
                         @csrf
                         @method('DELETE')
-                        <button class="btn btn-danger btn-sm" onclick="return confirm('Удалить видео?')">Удалить</button>
-                    </form>
+                        <button class="btn btn-danger btn-sm" onclick="return confirm('Delete Video?')">Delete</button>
+                    </form>--}}
                 </td>
             </tr>
         @endforeach
@@ -34,5 +34,5 @@
     </table>
 
     {{ $videos->links() }}
-@endsection
+
 </x-admin::layouts>

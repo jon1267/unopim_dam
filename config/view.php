@@ -25,6 +25,7 @@ return [
 
     'paths' => [
         resource_path('views'),
+        app_path('Extra/Youtube/Resources/views'),
     ],
 
     /*

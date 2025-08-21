@@ -196,6 +196,7 @@ return [
         Webkul\Theme\Providers\ThemeServiceProvider::class,
         Webkul\User\Providers\UserServiceProvider::class,
         Webkul\ElasticSearch\Providers\ElasticSearchServiceProvider::class,
+        Extra\Youtube\Providers\YoutubeServiceProvider::class,
     ])->toArray(),
 
     /*

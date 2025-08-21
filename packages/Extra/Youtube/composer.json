@@ -1,0 +1,16 @@
+{
+  "name": "extra/youtube",
+  "description": "Unopim Youtube extension",
+  "autoload": {
+    "psr-4": {
+      "Extra\\Youtube\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Extra\\Youtube\\Providers\\YoutubeServiceProvider"
+      ]
+    }
+  }
+}
